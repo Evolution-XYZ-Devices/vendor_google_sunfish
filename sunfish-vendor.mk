@@ -504,7 +504,6 @@ PRODUCT_PACKAGES += \
     EuiccGoogleOverlay \
     EuiccSupportPixel \
     EuiccSupportPixelPermissions \
-    HbmSVManager \
     PixelNfc \
     ims \
     qcrilmsgtunnel \
