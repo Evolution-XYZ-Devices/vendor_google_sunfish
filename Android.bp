@@ -123,6 +123,18 @@ android_app_import {
 }
 
 android_app_import {
+	name: "OemDmTrigger",
+	owner: "google",
+	apk: "proprietary/product/priv-app/OemDmTrigger/OemDmTrigger.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+}
+
+android_app_import {
 	name: "QtiTelephonyService",
 	owner: "google",
 	apk: "proprietary/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk",
@@ -156,9 +168,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "datastatusnotification",
+	name: "uceShimService",
 	owner: "google",
-	apk: "proprietary/system_ext/app/datastatusnotification/datastatusnotification.apk",
+	apk: "proprietary/system_ext/app/uceShimService/uceShimService.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -167,13 +179,14 @@ android_app_import {
 }
 
 android_app_import {
-	name: "uceShimService",
+	name: "CarrierSetup",
 	owner: "google",
-	apk: "proprietary/system_ext/app/uceShimService/uceShimService.apk",
-	certificate: "platform",
+	apk: "proprietary/system_ext/priv-app/CarrierSetup/CarrierSetup.apk",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
+	privileged: true,
 	system_ext_specific: true,
 }
 
@@ -206,18 +219,6 @@ android_app_import {
 	owner: "google",
 	apk: "proprietary/system_ext/priv-app/EuiccSupportPixelPermissions/EuiccSupportPixelPermissions.apk",
 	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	system_ext_specific: true,
-}
-
-android_app_import {
-	name: "HbmSVManager",
-	owner: "google",
-	apk: "proprietary/system_ext/priv-app/HbmSVManager/HbmSVManager.apk",
-	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
@@ -398,6 +399,13 @@ dex_import {
 	name: "com.quicinc.cne.constants-V2.1-java",
 	owner: "google",
 	jars: ["proprietary/system_ext/framework/com.quicinc.cne.constants-V2.1-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "google-ril",
+	owner: "google",
+	jars: ["proprietary/system_ext/framework/google-ril.jar"],
 	system_ext_specific: true,
 }
 
